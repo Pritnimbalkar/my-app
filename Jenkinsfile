@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-repo/project.git'
+                git 'https://github.com/Pritnimbalkar/my-app.git'
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
         stage('Report') {
             steps {
                 publishHTML(target:[
-                    allowMissing:false,
+                    allowMissing:true,
                     alwaysLinkToLastBuild:true,
                     keepAll:true,
                     reportDir: 'target',
